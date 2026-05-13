@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traineeschip Visie 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2E7D32;
+    --green-light: #43A047;
+    --green-pale: #E8F5E9;
+    --green-dark: #1B5E20;
+    --ink: #1a1a18;
+    --ink-mid: #4a4a45;
+    --ink-soft: #8a8a82;
+    --paper: #fafaf7;
+    --paper-warm: #f4f3ee;
+    --white: #ffffff;
+    --border: rgba(46,125,50,0.15);
+    --border-strong: rgba(46,125,50,0.3);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,250,247,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px; color: var(--green);
+    text-decoration: none;
+  }
+  .nav-label {
+    font-size: 12px; font-weight: 500; color: var(--ink-soft);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 140px 48px 80px;
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end;
+  }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--green);
+    display: flex; align-items: center; gap: 8px; margin-bottom: 20px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block; width: 24px; height: 1px; background: var(--green);
+  }
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1; color: var(--ink);
+  }
+  .hero-title em {
+    font-style: italic; color: var(--green);
+  }
+  .hero-subtitle {
+    font-size: 16px; line-height: 1.75; color: var(--ink-mid);
+    margin-top: 24px; max-width: 420px;
+  }
+  .hero-stat-block {
+    display: flex; flex-direction: column; gap: 20px;
+    padding-left: 48px; border-left: 2px solid var(--border-strong);
+  }
+  .hero-stat { }
+  .hero-stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px; color: var(--green); line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 13px; color: var(--ink-soft); margin-top: 4px; line-height: 1.5;
+  }
+  .hero-cta {
+    margin-top: 36px; display: inline-flex; align-items: center; gap: 10px;
+    background: var(--green); color: white;
+    padding: 14px 28px; border-radius: 40px;
+    font-size: 14px; font-weight: 500; text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .hero-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
+  .hero-cta::after { content: '↓'; }
+
+  /* SECTION */
+  .section {
+    max-width: 1100px; margin: 0 auto; padding: 80px 48px;
+  }
+  .section-header {
+    display: flex; align-items: baseline; gap: 20px; margin-bottom: 48px;
+  }
+  .section-num {
+    font-family: 'DM Serif Display', serif; font-size: 72px;
+    color: var(--green-pale); line-height: 1; user-select: none;
+    flex-shrink: 0;
+  }
+  .section-title-block { }
+  .section-eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--ink);
+  }
+
+  /* TREND GRID */
+  .trend-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .trend-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px 32px;
+    cursor: pointer; text-decoration: none; color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    display: block; position: relative; overflow: hidden;
+  }
+  .trend-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 0; background: var(--green);
+    transition: height 0.3s ease;
+  }
+  .trend-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(46,125,50,0.1); border-color: var(--border-strong); }
+  .trend-card:hover::before { height: 100%; }
+  .trend-icon {
+    font-size: 28px; margin-bottom: 14px; display: block;
+  }
+  .trend-card-title {
+    font-family: 'DM Serif Display', serif; font-size: 20px;
+    color: var(--ink); margin-bottom: 10px;
+  }
+  .trend-card-body {
+    font-size: 13px; line-height: 1.7; color: var(--ink-mid);
+  }
+  .trend-card-arrow {
+    position: absolute; bottom: 24px; right: 28px;
+    font-size: 18px; color: var(--green); opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .trend-card:hover .trend-card-arrow { opacity: 1; transform: translateX(4px); }
+
+  /* VISION BLOCK */
+  .vision-quote {
+    background: var(--green); color: white;
+    border-radius: 20px; padding: 48px 56px;
+    margin-bottom: 32px;
+  }
+  .vision-quote-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(22px, 3vw, 32px); line-height: 1.35;
+    font-style: italic;
+  }
+  .vision-quote-attr {
+    margin-top: 20px; font-size: 13px; opacity: 0.7; font-weight: 300;
+  }
+
+  .vision-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
+    margin-top: 16px;
+  }
+  .vision-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px;
+    cursor: pointer; text-decoration: none; color: inherit;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    position: relative;
+  }
+  .vision-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(46,125,50,0.1); border-color: var(--green-light); }
+  .vision-card-tag {
+    display: inline-block; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 20px;
+    background: var(--green-pale); color: var(--green-dark);
+    margin-bottom: 14px;
+  }
+  .vision-card-title {
+    font-family: 'DM Serif Display', serif; font-size: 18px;
+    color: var(--ink); margin-bottom: 10px; line-height: 1.3;
+  }
+  .vision-card-body {
+    font-size: 13px; line-height: 1.7; color: var(--ink-mid);
+  }
+  .vision-card-cta {
+    margin-top: 18px; font-size: 12px; font-weight: 500;
+    color: var(--green); display: flex; align-items: center; gap: 6px;
+  }
+  .vision-card-cta::after { content: '→'; transition: transform 0.2s; }
+  .vision-card:hover .vision-card-cta::after { transform: translateX(4px); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1100px; margin: 0 auto;
+    font-size: 13px; color: var(--ink-soft);
+  }
+
+  /* DIVIDER */
+  .divider {
+    max-width: 1100px; margin: 0 auto;
+    border: none; border-top: 1px solid var(--border);
+  }
+
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .hero { grid-template-columns: 1fr; padding: 120px 24px 60px; gap: 40px; }
+    .hero-stat-block { padding-left: 24px; flex-direction: row; flex-wrap: wrap; gap: 24px; }
+    .section { padding: 60px 24px; }
+    .trend-grid { grid-template-columns: 1fr; }
+    .vision-grid { grid-template-columns: 1fr; }
+    .vision-quote { padding: 32px; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Traineeschip</a>
+  <span class="nav-label">Visiedocument 2025</span>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">Salarisadministratie · Finance · HR</div>
+      <h1 class="hero-title">Talent zit niet<br>in een <em>cv.</em></h1>
+      <p class="hero-subtitle">Een visie op hoe wij jong talent verbinden aan organisaties die klaar zijn voor vernieuwing — onderbouwd door trends in de arbeidsmarkt.</p>
+      <a href="#trends" class="hero-cta">Bekijk de onderbouwing</a>
+    </div>
+    <div class="hero-stat-block">
+      <div class="hero-stat">
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">vakgebieden gecombineerd<br>in één programma</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">PTA</div>
+        <div class="hero-stat-label">selectie op potentieel,<br>niet op papier</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">∞</div>
+        <div class="hero-stat-label">leergierigheid als<br>kernkwalificatie</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- TRENDS -->
+  <section class="section" id="trends">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title-block">
+        <div class="section-eyebrow">Context</div>
+        <h2 class="section-title">Waarom de arbeidsmarkt<br>om ons vraagt</h2>
+      </div>
+    </div>
+
+    <div class="trend-grid">
+      <a href="pages/trend-schaarste.html" class="trend-card fade-up">
+        <span class="trend-icon">📉</span>
+        <div class="trend-card-title">Schaarste op de arbeidsmarkt</div>
+        <p class="trend-card-body">Payroll- en HR-specialisten zijn schaars. Het MKB kan niet concurreren op salaris. Vergrijzing versnelt het vertrek van ervaren krachten. De vraag naar flexibele instroom groeit structureel.</p>
+        <span class="trend-card-arrow">→</span>
+      </a>
+
+      <a href="pages/trend-technologie.html" class="trend-card fade-up" style="transition-delay: 0.1s">
+        <span class="trend-icon">⚙️</span>
+        <div class="trend-card-title">Technologisering van het vak</div>
+        <p class="trend-card-body">AI automatiseert routinetaken in payroll. ERP-systemen integreren HR en finance. De rol verschuift van uitvoerend naar adviserend. Digitaal vaardige juniors zijn daardoor juist in trek.</p>
+        <span class="trend-card-arrow">→</span>
+      </a>
+
+      <a href="pages/trend-werkgevers.html" class="trend-card fade-up" style="transition-delay: 0.2s">
+        <span class="trend-icon">🏢</span>
+        <div class="trend-card-title">Wat werkgevers zoeken</div>
+        <p class="trend-card-body">Brede inzetbaarheid, snelle onboarding en actuele kennis van wet- en regelgeving. MKB wil direct productief, corporate wil potentieel. Detachering wordt een laagdrempelige instap.</p>
+        <span class="trend-card-arrow">→</span>
+      </a>
+
+      <a href="pages/trend-generatiez.html" class="trend-card fade-up" style="transition-delay: 0.3s">
+        <span class="trend-icon">🌱</span>
+        <div class="trend-card-title">Generatie Z op de arbeidsmarkt</div>
+        <p class="trend-card-body">Zoekt ontwikkeling boven zekerheid. Wil afwisseling, purpose en snelle groei. Feedback-gedreven en ambitieus. Een traineeship past precies bij hun mindset en verwachtingen.</p>
+        <span class="trend-card-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- VISION -->
+  <section class="section" id="visie">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title-block">
+        <div class="section-eyebrow">Visie</div>
+        <h2 class="section-title">Wat wij geloven<br>en hoe wij handelen</h2>
+      </div>
+    </div>
+
+    <div class="vision-quote fade-up">
+      <p class="vision-quote-text">"Wij geloven dat talent niet in een cv zit. Wij verbinden ambitieuze denkers aan organisaties die klaar zijn voor vernieuwing — en zorgen dat beiden durven groeien."</p>
+      <p class="vision-quote-attr">Kernvisie Traineeschip · 2025</p>
+    </div>
+
+    <div class="vision-grid">
+      <a href="pages/visie-pta.html" class="vision-card fade-up">
+        <span class="vision-card-tag">Selectie</span>
+        <div class="vision-card-title">Het Persoonlijk Talent Profiel</div>
+        <p class="vision-card-body">Wij selecteren op potentieel, niet op papier. Het PTA onthult wat iemand werkelijk in huis heeft — ongeacht achtergrond of diploma.</p>
+        <div class="vision-card-cta">Lees meer</div>
+      </a>
+
+      <a href="pages/visie-klant.html" class="vision-card fade-up" style="transition-delay: 0.1s">
+        <span class="vision-card-tag">Voor de klant</span>
+        <div class="vision-card-title">Een denker, geen uitvoerder</div>
+        <p class="vision-card-body">Klanten krijgen geen standaard junior. Ze krijgen iemand die durft te innoveren — juist omdat hij of zij een vangnet heeft bij ons.</p>
+        <div class="vision-card-cta">Lees meer</div>
+      </a>
+
+      <a href="pages/visie-trainee.html" class="vision-card fade-up" style="transition-delay: 0.2s">
+        <span class="vision-card-tag">Voor de trainee</span>
+        <div class="vision-card-title">Vangnet als vrijheid</div>
+        <p class="vision-card-body">Het buddy-systeem en de LMS zorgen dat trainees nooit alleen staan. Die zekerheid maakt hen dapperder dan een vaste medewerker ooit zou zijn.</p>
+        <div class="vision-card-cta">Lees meer</div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<hr class="divider">
+<footer>
+  <span>Traineeschip · Visiedocument 2025</span>
+  <span>Salarisadministratie · Finance · HR</span>
+</footer>
+
+<script>
+  document.querySelector('.hero-cta').addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('trends').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

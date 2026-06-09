@@ -1,274 +1,399 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Traineeship Visie 2025</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --green: #2E7D32;
-    --green-pale: #E8F5E9;
-    --green-dark: #1B5E20;
-    --amber: #7B5C00;
-    --amber-pale: #FFF8E1;
-    --blue: #1A4A7A;
-    --blue-pale: #E8F0FB;
-    --red: #7A2020;
-    --red-pale: #FBE8E8;
-    --ink: #1a1a18;
-    --ink-mid: #4a4a45;
-    --ink-soft: #8a8a82;
-    --paper: #f5f5f2;
-    --white: #ffffff;
-    --border: #e0dfd8;
-    --radius: 14px;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traineeship Visie 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green: #2e7d32;
+        --green-pale: #e8f5e9;
+        --green-dark: #1b5e20;
+        --amber: #7b5c00;
+        --amber-pale: #fff8e1;
+        --blue: #1a4a7a;
+        --blue-pale: #e8f0fb;
+        --red: #7a2020;
+        --red-pale: #fbe8e8;
+        --ink: #1a1a18;
+        --ink-mid: #4a4a45;
+        --ink-soft: #8a8a82;
+        --paper: #f5f5f2;
+        --white: #ffffff;
+        --border: #e0dfd8;
+        --radius: 14px;
+      }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    min-height: 100vh;
-    padding: 32px 24px 64px;
-  }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        min-height: 100vh;
+        padding: 32px 24px 64px;
+      }
 
-  .page {
-    max-width: 780px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+      .page {
+        max-width: 780px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
 
-  .page-header { padding: 8px 4px 16px; }
-  .page-header-eyebrow {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-soft); margin-bottom: 6px;
-  }
-  .page-header-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 28px; color: var(--ink); line-height: 1.2;
-  }
+      .page-header {
+        padding: 8px 4px 16px;
+      }
+      .page-header-eyebrow {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 6px;
+      }
+      .page-header-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 28px;
+        color: var(--ink);
+        line-height: 1.2;
+      }
 
-  .card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 28px 32px;
-  }
+      .card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 28px 32px;
+      }
 
-  .label {
-    display: inline-block;
-    font-size: 12px; font-weight: 500;
-    padding: 4px 12px; border-radius: 20px;
-    margin-bottom: 12px;
-  }
-  .label-blue  { background: var(--blue-pale);  color: var(--blue); }
-  .label-green { background: var(--green-pale); color: var(--green-dark); }
-  .label-amber { background: var(--amber-pale); color: var(--amber); }
-  .label-red   { background: var(--red-pale);   color: var(--red); }
+      .label {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+      }
+      .label-blue {
+        background: var(--blue-pale);
+        color: var(--blue);
+      }
+      .label-green {
+        background: var(--green-pale);
+        color: var(--green-dark);
+      }
+      .label-amber {
+        background: var(--amber-pale);
+        color: var(--amber);
+      }
+      .label-red {
+        background: var(--red-pale);
+        color: var(--red);
+      }
 
-  .section-label {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.09em;
-    text-transform: uppercase; color: var(--ink-soft);
-    margin-bottom: 10px;
-  }
+      .section-label {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 10px;
+      }
 
-  .quote-card {
-    background: var(--white);
-    padding: 28px 32px;
-    border-left: 4px solid var(--green);
-    border-radius: 0 var(--radius) var(--radius) 0;
-  }
-  .quote-text {
-    font-size: 20px; line-height: 1.55; font-weight: 400; color: var(--ink);
-  }
+      .quote-card {
+        background: var(--white);
+        padding: 28px 32px;
+        border-left: 4px solid var(--green);
+        border-radius: 0 var(--radius) var(--radius) 0;
+      }
+      .quote-text {
+        font-size: 20px;
+        line-height: 1.55;
+        font-weight: 400;
+        color: var(--ink);
+      }
 
-  .body-text {
-    font-size: 15px; line-height: 1.75; color: var(--ink-mid);
-  }
+      .body-text {
+        font-size: 15px;
+        line-height: 1.75;
+        color: var(--ink-mid);
+      }
 
-  .card-title {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.09em;
-    text-transform: uppercase; color: var(--ink-soft);
-    margin-bottom: 10px;
-  }
+      .card-title {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 10px;
+      }
 
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
 
-  .pills {
-    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;
-  }
-  .pill {
-    font-size: 13px; color: var(--ink-mid);
-    border: 1px solid var(--border);
-    border-radius: 20px; padding: 5px 14px;
-  }
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 18px;
+      }
+      .pill {
+        font-size: 13px;
+        color: var(--ink-mid);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 5px 14px;
+      }
 
-  .divider-label {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-soft);
-    padding: 8px 4px 4px;
-  }
+      .divider-label {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        padding: 8px 4px 4px;
+      }
 
-  /* Clickable cards — trends AND visie blocks */
-  .link-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 24px 28px;
-    text-decoration: none; color: inherit;
-    display: block;
-    border: 1px solid transparent;
-    transition: border-color .15s, box-shadow .15s;
-  }
-  .link-card:hover {
-    border-color: var(--border);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  }
-  .link-card-title {
-    font-size: 15px; font-weight: 500; color: var(--ink);
-    margin-bottom: 8px;
-  }
-  .link-card-body {
-    font-size: 13px; line-height: 1.65; color: var(--ink-mid);
-  }
-  .link-card-more {
-    font-size: 12px; color: var(--green); font-weight: 500;
-    margin-top: 12px; display: inline-block;
-  }
+      /* Clickable cards — trends AND visie blocks */
+      .link-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 24px 28px;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        border: 1px solid transparent;
+        transition:
+          border-color 0.15s,
+          box-shadow 0.15s;
+      }
+      .link-card:hover {
+        border-color: var(--border);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      }
+      .link-card-title {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+      .link-card-body {
+        font-size: 13px;
+        line-height: 1.65;
+        color: var(--ink-mid);
+      }
+      .link-card-more {
+        font-size: 12px;
+        color: var(--green);
+        font-weight: 500;
+        margin-top: 12px;
+        display: inline-block;
+      }
 
-  .questions-list {
-    list-style: none; display: flex; flex-direction: column; gap: 10px;
-    margin-top: 4px;
-  }
-  .questions-list li {
-    display: flex; align-items: flex-start; gap: 12px;
-    font-size: 14px; color: var(--ink-mid); line-height: 1.55;
-  }
-  .questions-list li::before {
-    content: '';
-    width: 16px; height: 16px; border-radius: 3px;
-    border: 1.5px solid var(--border);
-    flex-shrink: 0; margin-top: 2px;
-  }
+      .questions-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 4px;
+      }
+      .questions-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 14px;
+        color: var(--ink-mid);
+        line-height: 1.55;
+      }
+      .questions-list li::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        border: 1.5px solid var(--border);
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
 
-  @media (max-width: 600px) {
-    body { padding: 20px 16px 48px; }
-    .grid-2 { grid-template-columns: 1fr; }
-    .quote-text { font-size: 17px; }
-  }
-</style>
-</head>
-<body>
-<div class="page">
-
-  <div class="page-header">
-    <div class="page-header-eyebrow">Salarisadministratie · Finance · HR</div>
-    <div class="page-header-title">Visiedocument Traineeship 2026</div>
-  </div>
-
-  <!-- TRENDS -->
-  <div class="divider-label">Arbeidsmarkttrends — de onderbouwing</div>
-
-  <div class="grid-2">
-    <a href="pages/trend-schaarste.html" class="link-card">
-      <span class="label label-blue">Trend 01</span>
-      <div class="link-card-title">Schaarste op de arbeidsmarkt</div>
-      <p class="link-card-body">Payroll- en HR-specialisten zijn schaars. Het MKB kan niet concurreren op salaris. Vergrijzing versnelt het vertrek van ervaren krachten.</p>
-      <span class="link-card-more">Lees verder →</span>
-    </a>
-    <a href="pages/trend-technologie.html" class="link-card">
-      <span class="label label-blue">Trend 02</span>
-      <div class="link-card-title">Technologisering van het vak</div>
-      <p class="link-card-body">AI automatiseert routinetaken. De rol verschuift van uitvoerend naar adviserend. Digitaal vaardige juniors zijn daardoor juist in trek.</p>
-      <span class="link-card-more">Lees verder →</span>
-    </a>
-    <a href="pages/trend-werkgevers.html" class="link-card">
-      <span class="label label-blue">Trend 03</span>
-      <div class="link-card-title">Wat werkgevers zoeken</div>
-      <p class="link-card-body">Brede inzetbaarheid, snelle onboarding, actuele kennis. MKB wil direct productief, corporate wil potentieel. Detachering wordt laagdrempeliger.</p>
-      <span class="link-card-more">Lees verder →</span>
-    </a>
-    <a href="pages/trend-generatiez.html" class="link-card">
-      <span class="label label-blue">Trend 04</span>
-      <div class="link-card-title">Generatie Z op de arbeidsmarkt</div>
-      <p class="link-card-body">Zoekt ontwikkeling boven zekerheid. Wil afwisseling, purpose en snelle groei. Een traineeship past precies bij hun mindset.</p>
-      <span class="link-card-more">Lees verder →</span>
-    </a>
-  </div>
-
-  <!-- VISIE -->
-  <div class="divider-label">Onze visie</div>
-
-  <div class="quote-card">
-    <div class="section-label">Kernvisie — de zin die alles samenvat</div>
-    <p class="quote-text">Wij geloven dat talent niet in een cv zit. Wij verbinden ambitieuze denkers aan organisaties die klaar zijn voor vernieuwing — <strong>en zorgen dat beiden durven groeien.</strong></p>
-  </div>
-
-  <a href="pages/visie-pta.html" class="link-card">
-    <span class="label label-blue">Onderscheidend vermogen</span>
-    <div class="card-title">Wat maakt jullie anders</div>
-    <p class="link-card-body">Waar anderen selecteren op diploma's en werkervaring, selecteren jullie op potentieel. Het Persoonlijk Talent Profiel onthult wat iemand werkelijk kan — ongeacht hun achtergrond. Jullie trainees zijn academisch sterk, maar niet per se opgeleid in de driehoek. Juist die frisse blik is het product.</p>
-    <span class="link-card-more">Lees verder →</span>
-  </a>
-
-  <div class="grid-2">
-    <a href="pages/visie-klant.html" class="link-card">
-      <span class="label label-green">Voor de klant</span>
-      <div class="card-title">Wat de opdrachtgever krijgt</div>
-      <p class="link-card-body">Geen uitvoerende kracht, maar een innovatieve denker die vastgegroeide processen durft te bevragen. Iemand die durft te experimenteren — juist omdat hij of zij terugval heeft bij jullie. Dat geeft een vaste medewerker zelden.</p>
-      <div class="pills">
-        <span class="pill">Frisse blik</span>
-        <span class="pill">Procesverbetering</span>
-        <span class="pill">Laag risico</span>
-        <span class="pill">Netwerk als back-up</span>
+      @media (max-width: 600px) {
+        body {
+          padding: 20px 16px 48px;
+        }
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .quote-text {
+          font-size: 17px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="page-header">
+        <div class="page-header-eyebrow">
+          Salarisadministratie · Finance · HR
+        </div>
+        <div class="page-header-title">Visiedocument Traineeship 2026</div>
       </div>
-      <span class="link-card-more">Lees verder →</span>
-    </a>
-    <a href="pages/visie-trainee.html" class="link-card">
-      <span class="label label-amber">Voor de trainee</span>
-      <div class="card-title">Wat de trainee krijgt</div>
-      <p class="link-card-body">Een vangnet dat vrijheid creëert. De buddy en het LMS zorgen dat de trainee nooit alleen staat. Die zekerheid maakt hen dapperder op de werkvloer dan een vaste medewerker ooit zou durven zijn.</p>
-      <div class="pills">
-        <span class="pill">Buddy-systeem</span>
-        <span class="pill">LMS toegang</span>
-        <span class="pill">Psychologische veiligheid</span>
-        <span class="pill">Doorgroeiperspectief</span>
+
+      <!-- TRENDS -->
+      <div class="divider-label">Arbeidsmarkttrends — de onderbouwing</div>
+
+      <div class="grid-2">
+        <a href="pages/trend-schaarste.html" class="link-card">
+          <span class="label label-blue">Trend 01</span>
+          <div class="link-card-title">Schaarste op de arbeidsmarkt</div>
+          <p class="link-card-body">
+            Payroll- en HR-specialisten zijn schaars. Het MKB kan niet
+            concurreren op salaris. Vergrijzing versnelt het vertrek van ervaren
+            krachten.
+          </p>
+          <span class="link-card-more">Lees verder →</span>
+        </a>
+        <a href="pages/trend-technologie.html" class="link-card">
+          <span class="label label-blue">Trend 02</span>
+          <div class="link-card-title">Technologisering van het vak</div>
+          <p class="link-card-body">
+            AI automatiseert routinetaken. De rol verschuift van uitvoerend naar
+            adviserend. Digitaal vaardige juniors zijn daardoor juist in trek.
+          </p>
+          <span class="link-card-more">Lees verder →</span>
+        </a>
+        <a href="pages/trend-werkgevers.html" class="link-card">
+          <span class="label label-blue">Trend 03</span>
+          <div class="link-card-title">Wat werkgevers zoeken</div>
+          <p class="link-card-body">
+            Brede inzetbaarheid, snelle onboarding, actuele kennis. MKB wil
+            direct productief, corporate wil potentieel. Detachering wordt
+            laagdrempeliger.
+          </p>
+          <span class="link-card-more">Lees verder →</span>
+        </a>
+        <a href="pages/trend-generatiez.html" class="link-card">
+          <span class="label label-blue">Trend 04</span>
+          <div class="link-card-title">Generatie Z op de arbeidsmarkt</div>
+          <p class="link-card-body">
+            Zoekt ontwikkeling boven zekerheid. Wil afwisseling, purpose en
+            snelle groei. Een traineeship past precies bij hun mindset.
+          </p>
+          <span class="link-card-more">Lees verder →</span>
+        </a>
       </div>
-      <span class="link-card-more">Lees verder →</span>
-    </a>
-  </div>
 
-  <a href="pages/visie-markt.html" class="link-card">
-    <span class="label label-red">Marktpositie</span>
-    <div class="card-title">Waarom nu, waarom jullie</div>
-    <p class="link-card-body">De arbeidsmarkt in HR, payroll en finance vergrijst. MKB en corporate organisaties kunnen niet concurreren op salaris met grote werkgevers voor ervaren professionals. Jullie bieden een alternatief: een talentvolle, betaalbare kracht die met een nieuwe blik naar bestaande processen kijkt — en die na de detacheringsperiode gewoon in dienst kan treden. Geen langdurig wervingstraject, geen onzekerheid over kwaliteit.</p>
-    <span class="link-card-more">Lees verder →</span>
-  </a>
+      <!-- VISIE -->
+      <div class="divider-label">Onze visie</div>
 
-  <!-- OPENSTAANDE VRAGEN -->
-  <div class="card">
-    <div class="section-label">Openstaande vragen om de visie te verscherpen</div>
-    <ul class="questions-list">
-      <li>Hoe positioneren we ons anders naar MKB versus corporate?</li>
-      <li>Hoe overtuigen we klanten die gewend zijn te kijken naar diploma's?</li>
-      <li>Wat is de ideale detacheringsperiode en hoe verloopt de overgang naar vast?</li>
-    </ul>
-  </div>
-  <!-- Uitwerking Trends -->
-   <a href="pages/trends-uitgewerkt.html" class="trend-card">
-  <div class="trend-card-title">De trends uitgewerkt</div>
-  <p class="trend-card-body">Gen Z, AI & digitalisering en de complexiteit van regelgeving — de drie centrale trends achter ons traineeship.</p>
-  <span class="trend-card-arrow">→</span>
-</a>
+      <div class="quote-card">
+        <div class="section-label">Kernvisie — de zin die alles samenvat</div>
+        <p class="quote-text">
+          Wij geloven dat talent niet in een cv zit. Wij verbinden ambitieuze
+          denkers aan organisaties die klaar zijn voor vernieuwing —
+          <strong>en zorgen dat beiden durven groeien.</strong>
+        </p>
+      </div>
 
-</div>
-</body>
+      <a href="pages/visie-pta.html" class="link-card">
+        <span class="label label-blue">Onderscheidend vermogen</span>
+        <div class="card-title">Wat maakt jullie anders</div>
+        <p class="link-card-body">
+          Waar anderen selecteren op diploma's en werkervaring, selecteren
+          jullie op potentieel. Het Persoonlijk Talent Profiel onthult wat
+          iemand werkelijk kan — ongeacht hun achtergrond. Jullie trainees zijn
+          academisch sterk, maar niet per se opgeleid in de driehoek. Juist die
+          frisse blik is het product.
+        </p>
+        <span class="link-card-more">Lees verder →</span>
+      </a>
+
+      <div class="grid-2">
+        <a href="pages/visie-klant.html" class="link-card">
+          <span class="label label-green">Voor de klant</span>
+          <div class="card-title">Wat de opdrachtgever krijgt</div>
+          <p class="link-card-body">
+            Geen uitvoerende kracht, maar een innovatieve denker die
+            vastgegroeide processen durft te bevragen. Iemand die durft te
+            experimenteren — juist omdat hij of zij terugval heeft bij jullie.
+            Dat geeft een vaste medewerker zelden.
+          </p>
+          <div class="pills">
+            <span class="pill">Frisse blik</span>
+            <span class="pill">Procesverbetering</span>
+            <span class="pill">Laag risico</span>
+            <span class="pill">Netwerk als back-up</span>
+          </div>
+          <span class="link-card-more">Lees verder →</span>
+        </a>
+        <a href="pages/visie-trainee.html" class="link-card">
+          <span class="label label-amber">Voor de trainee</span>
+          <div class="card-title">Wat de trainee krijgt</div>
+          <p class="link-card-body">
+            Een vangnet dat vrijheid creëert. De buddy en het LMS zorgen dat de
+            trainee nooit alleen staat. Die zekerheid maakt hen dapperder op de
+            werkvloer dan een vaste medewerker ooit zou durven zijn.
+          </p>
+          <div class="pills">
+            <span class="pill">Buddy-systeem</span>
+            <span class="pill">LMS toegang</span>
+            <span class="pill">Psychologische veiligheid</span>
+            <span class="pill">Doorgroeiperspectief</span>
+          </div>
+          <span class="link-card-more">Lees verder →</span>
+        </a>
+      </div>
+
+      <a href="pages/visie-markt.html" class="link-card">
+        <span class="label label-red">Marktpositie</span>
+        <div class="card-title">Waarom nu, waarom jullie</div>
+        <p class="link-card-body">
+          De arbeidsmarkt in HR, payroll en finance vergrijst. MKB en corporate
+          organisaties kunnen niet concurreren op salaris met grote werkgevers
+          voor ervaren professionals. Jullie bieden een alternatief: een
+          talentvolle, betaalbare kracht die met een nieuwe blik naar bestaande
+          processen kijkt — en die na de detacheringsperiode gewoon in dienst
+          kan treden. Geen langdurig wervingstraject, geen onzekerheid over
+          kwaliteit.
+        </p>
+        <span class="link-card-more">Lees verder →</span>
+      </a>
+
+      <!-- Uitwerking Trends -->
+      <div class="divider-label">Link Trends uitgewerkt</div>
+
+      <a href="pages/trends-uitgewerkt.html" class="link-card">
+        <span class="label label-green">Trends</span>
+        <div class="card-title">De trends uitgewerkt</div>
+        <p class="link-card-body">
+          Gen Z, AI & digitalisering en de complexiteit van regelgeving — de
+          drie centrale trends achter ons traineeship.
+        </p>
+        <span class="link-card-more">Lees verder →</span>
+      </a>
+
+      <!-- MISSIE -->
+      <div class="divider-label">Missie</div>
+
+      <a href="pages/missie.html" class="link-card">
+        <span class="label label-green">Missie</span>
+        <div class="card-title">Onze missieverklaring</div>
+        <p class="link-card-body">
+          Wij plaatsen professionals in jouw organisatie die het innoverend
+          vermogen versterken.
+        </p>
+        <span class="link-card-more">Lees verder →</span>
+      </a>
+    </div>
+  </body>
 </html>

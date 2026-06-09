@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Missie · Traineeschip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green: #2e7d32;
+        --green-pale: #e8f5e9;
+        --green-dark: #1b5e20;
+        --amber: #7b5c00;
+        --amber-pale: #fff8e1;
+        --ink: #1a1a18;
+        --ink-mid: #4a4a45;
+        --ink-soft: #8a8a82;
+        --paper: #f5f5f2;
+        --white: #ffffff;
+        --border: #e0dfd8;
+        --radius: 14px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        padding: 32px 24px 64px;
+      }
+      .page {
+        max-width: 780px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .page-header {
+        padding: 8px 4px 16px;
+      }
+      .back {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--ink-soft);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 20px;
+        transition: color 0.15s;
+      }
+      .back:hover {
+        color: var(--green);
+      }
+      .eyebrow {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 6px;
+      }
+      .page-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 28px;
+        color: var(--ink);
+        line-height: 1.2;
+      }
+      .card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 28px 32px;
+      }
+      .label {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 4px 12px;
+        border-radius: 20px;
+        margin-bottom: 12px;
+      }
+      .label-green {
+        background: var(--green-pale);
+        color: var(--green-dark);
+      }
+      .label-amber {
+        background: var(--amber-pale);
+        color: var(--amber);
+      }
+      .card-title {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 10px;
+      }
+      .body-text {
+        font-size: 15px;
+        line-height: 1.75;
+        color: var(--ink-mid);
+      }
+      .body-text + .body-text {
+        margin-top: 14px;
+      }
+      .missie-card {
+        background: var(--white);
+        padding: 36px 32px;
+        border-left: 4px solid var(--green);
+        border-radius: 0 var(--radius) var(--radius) 0;
+      }
+      .missie-label {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        margin-bottom: 14px;
+      }
+      .missie-text {
+        font-family: "DM Serif Display", serif;
+        font-size: 26px;
+        line-height: 1.4;
+        color: var(--ink);
+      }
+      .notitie {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .notitie + .notitie {
+        margin-top: 20px;
+      }
+      .notitie-marker {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--amber-pale);
+        color: var(--amber);
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      .notitie-quote {
+        font-size: 14px;
+        font-style: italic;
+        color: var(--ink);
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+      .notitie-body {
+        font-size: 13px;
+        line-height: 1.65;
+        color: var(--ink-mid);
+      }
+      .nav-bottom {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 4px 0;
+      }
+      .nav-link {
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 40px;
+        transition: all 0.15s;
+      }
+      .nav-link.secondary {
+        border: 1px solid var(--border);
+        color: var(--ink-mid);
+        background: var(--white);
+      }
+      .nav-link.secondary:hover {
+        border-color: #c0bfb8;
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="page-header">
+        <a href="../index.html" class="back">← Terug naar overzicht</a>
+        <div class="eyebrow">Traineeschip · Missie</div>
+        <div class="page-title">Onze missie</div>
+      </div>
+
+      <div class="missie-card">
+        <div class="missie-label">Missieverklaring</div>
+        <p class="missie-text">
+          Wij plaatsen professionals in jouw organisatie die het innoverend
+          vermogen versterken.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="label label-amber">Notities</span>
+        <div class="card-title">Mogelijke verbeteringen — ter overweging</div>
+
+        <div class="notitie">
+          <div class="notitie-marker">1</div>
+          <div>
+            <div class="notitie-quote">
+              "Wij brengen innoverend vermogen naar jouw organisatie — met
+              professionals die een heel netwerk van vakkennis achter zich
+              hebben staan."
+            </div>
+            <div class="notitie-body">
+              Deze variant maakt het netwerk expliciet zichtbaar in de missie
+              zelf. Daarmee wordt direct duidelijk wat jullie onderscheidt van
+              een gewone detacheerder.
+            </div>
+          </div>
+        </div>
+
+        <div class="notitie">
+          <div class="notitie-marker">2</div>
+          <div>
+            <div class="notitie-quote">
+              "Wij versterken organisaties met professionals die durven
+              vernieuwen — gedragen door een netwerk van gelijkgestemde
+              vakgenoten."
+            </div>
+            <div class="notitie-body">
+              Deze variant benadrukt de community-kant: gelijkgestemde
+              vakgenoten die samen optrekken. Kan aantrekkelijk zijn voor de
+              werving van nieuwe trainees en zzp'ers.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-bottom">
+        <a href="../index.html" class="nav-link secondary"
+          >← Terug naar overzicht</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
